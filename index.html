@@ -46,7 +46,7 @@
             let playerScore = 0;
              
 
-             for (let i = 1; i <= 5; i++){
+            for (let i = 1; i <= 5; i++){
 
                 const computerSelection = computerPlay();
                 let playerSelection = prompt("Player, what is your choice?");
@@ -55,21 +55,32 @@
                 
                 if (playRound(playerSelection, computerSelection) === 1) {
                     console.log("Computer Wins! " + computerSelection + " beats " + playerSelection  )
+                    computerScore++;
                 }
                 if (playRound(playerSelection, computerSelection) === 2) {
                     console.log("Player Wins! " + playerSelection + " beats " +  computerSelection )
+                    playerScore++;
                 }
                 if (playRound(playerSelection, computerSelection) === 3) {
                     console.log("Tie" )
                 }
+
+
+            }
+            if (computerScore > playerScore) {
+                console.log("Computer is the big winner!")
+            }
+            if (playerScore > computerScore) {
+                console.log("Player you are the big winner!")
+            }
+            if (playerScore === computerScore) {
+                console.log("This is a tie game!")
             }
             
          }
 
         
         
-
-        // console.log(playRound(playerSelection, computerSelection));
     </script>
 </body>
 </html>
