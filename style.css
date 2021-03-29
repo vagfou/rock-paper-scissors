@@ -14,3 +14,9 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
+.container {
+    background-image: linear-gradient(40deg, #7d5fff, #1158e2);
+    width: 100vw;
+    height: 100vh;
+}
